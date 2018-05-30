@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">hshealthy</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="my_is_info_user">我是普通用户</string>
+    <string name="my_is_doctor">我是专家医生</string>
+</resources>
