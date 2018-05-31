@@ -14,10 +14,15 @@ import rx.Observable;
  * Created by Administrator on 2016/11/9.
  */
 public interface HttpService {
-
-//    @FormUrlEncoded
+    //@FormUrlEncoded
 //    @POST("getIpInfo.php")
 //    Observable<BaseHttpResult<IpInfoBean>> getIpInfo(@Field("ip") String ip);
+    //登录接口
     @POST("getlogin.php")
-    Observable<BaseHttpResult<CustomerBean>> getIpInfo(@Query("phone") String phone,@Query("code") String code);
+    Observable<BaseHttpResult<CustomerBean>> getIpInfo(@Query("phone") String phone, @Query("code") String code);
+
+    //发送验证码接口
+    @GET()
+    Observable<BaseHttpResult> getCoode(@Query("code") String phone);
+
 }

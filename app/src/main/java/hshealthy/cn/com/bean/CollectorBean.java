@@ -1,11 +1,11 @@
-package hshealthy.cn.com.model;
+package hshealthy.cn.com.bean;
 
 import android.content.Context;
 
 import java.io.Serializable;
 
 /**
- * Created by 71443 on 2018/5/25.
+ * Created by 71443 on 2018/5/31.
  */
 
 public class CollectorBean implements Serializable {

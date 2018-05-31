@@ -40,10 +40,13 @@ public class LoginModellmpl extends BaseModel implements LoginModel {
                 });
     }
 
+    public void getCode(@NonNull String code){
+
+    }
+
     //通过接口产生信息回调
     public interface InfoHint {
         void successInfo(String str);
-
         void failInfo(String str);
 
     }

@@ -7,6 +7,10 @@ import hshealthy.cn.com.base.BaseView;
  * 登录view
  */
 
-public class LoginView implements BaseView {
+public interface LoginView extends BaseView {
+    //清空手机号码
+     void onClearphoneText();
+
+     void onSetCodeTime();
 
 }

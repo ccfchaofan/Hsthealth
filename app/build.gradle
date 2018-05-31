@@ -10,6 +10,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        ndk{
+            abiFilters"armeabi-v7a","x86"
+        }
     }
     buildTypes {
         release {
@@ -50,9 +54,9 @@ dependencies {
     /*butterknife*/
     compile 'com.jakewharton:butterknife:7.0.1'
     compile "com.github.bumptech.glide:glide:${GLIDE_VERSION_4}"
-
     compile 'com.alibaba:fastjson:1.1.54.android'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile project(':IMKit')
 }

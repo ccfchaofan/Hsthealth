@@ -12,7 +12,6 @@ import hshealthy.cn.com.util.WeakReferenceUtil;
 
 /**
  * BaseActivity
- * Created by Administrator on 2016/12/15.
  */
 public abstract class BaseActivity<P extends BasePresenter> extends FragmentActivity implements BaseView, View.OnClickListener {
     protected View view;

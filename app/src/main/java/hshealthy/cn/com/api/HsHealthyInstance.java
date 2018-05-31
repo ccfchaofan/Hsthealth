@@ -2,7 +2,7 @@ package hshealthy.cn.com.api;
 
 import android.content.Context;
 
-import hshealthy.cn.com.model.CollectorBean;
+import hshealthy.cn.com.bean.CollectorBean;
 
 /**
  * Created by 71443 on 2018/5/25.

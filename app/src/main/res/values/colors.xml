@@ -6,4 +6,5 @@
 
     <color name="tab_checked">#3F51B5</color>
     <color name="tab_unchecked">#757575</color>
+    <color name="color_ffffff">#ffffff</color>
 </resources>
