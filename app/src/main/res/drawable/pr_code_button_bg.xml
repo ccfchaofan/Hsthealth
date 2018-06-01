@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!--设置渐变色-->
+            <gradient
+                android:angle="0"
+                android:startColor="#77D0FC"
+                android:endColor="#42A3F7"/>
+
+            <!--设置上面两个角的弧度-->
+            <corners android:topLeftRadius="20dp"
+            android:topRightRadius="20dp"
+            android:bottomRightRadius="20dp"
+            android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+
+</layer-list>
