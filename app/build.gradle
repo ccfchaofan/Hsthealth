@@ -11,8 +11,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
 
-        ndk{
-            abiFilters"armeabi-v7a","x86"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
         }
     }
     buildTypes {
@@ -20,6 +20,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    buildToolsVersion '27.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -32,11 +37,10 @@ configurations.all {
 
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-
     /*okhttp*/
     implementation 'com.squareup.okhttp3:okhttp:3.3.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
