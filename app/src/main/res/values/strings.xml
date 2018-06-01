@@ -18,4 +18,10 @@
     <string name="my_collection">收藏</string>
     <string name="earn_points">签到积分赚不停</string>
 
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="qr_code">我的二维码</string>
+    <string name="address">我的地址</string>
+    <string name="phone">账号</string>
+
 </resources>
