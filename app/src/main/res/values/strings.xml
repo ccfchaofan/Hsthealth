@@ -14,7 +14,8 @@
     <string name="my_assets">我的资产</string>
     <string name="task_center">任务中心</string>
     <string name="my_order">我的订单</string>
-
+    <string name="my_seting">设置</string>
+    <string name="my_collection">收藏</string>
     <string name="earn_points">签到积分赚不停</string>
 
 </resources>
