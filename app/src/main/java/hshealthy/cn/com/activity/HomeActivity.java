@@ -7,7 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
-
 import hshealthy.cn.com.R;
 import hshealthy.cn.com.adapter.ViewPagerAdapter;
 import hshealthy.cn.com.fragment.BaseFragment;

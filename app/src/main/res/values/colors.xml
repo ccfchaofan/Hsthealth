@@ -7,4 +7,12 @@
     <color name="tab_checked">#3F51B5</color>
     <color name="tab_unchecked">#757575</color>
     <color name="color_ffffff">#ffffff</color>
+
+    <!-- 通用标准文案颜色值 -->
+    <color name="standard_font_color">#4A4A4A</color>
+    <!-- 3级文案颜色值 -->
+    <color name="there_font_color">#9B9B9B</color>
+    
+    <color name="color_f7c63e">#f7c63e</color>
+
 </resources>
