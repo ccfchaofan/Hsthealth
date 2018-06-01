@@ -91,7 +91,7 @@
                         android:layout_width="@dimen/dp_29"
                         android:layout_height="@dimen/dp_29"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/ic_profile_healthPlan" />
+                        android:src="@mipmap/ic_profile_healthplan" />
 
                     <TextView
                         android:id="@+id/my_health_plan"
