@@ -6,4 +6,15 @@
 
     <string name="my_is_info_user">我是普通用户</string>
     <string name="my_is_doctor">我是专家医生</string>
+
+    <!--个人中心文案-->
+    <string name="address_administration">地址管理</string>
+    <string name="my_health_plan">我的健康计划</string>
+    <string name="health_archives">健康档案</string>
+    <string name="my_assets">我的资产</string>
+    <string name="task_center">任务中心</string>
+    <string name="my_order">我的订单</string>
+
+    <string name="earn_points">签到积分赚不停</string>
+
 </resources>
