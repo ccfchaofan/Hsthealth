@@ -7,9 +7,15 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+
+import java.util.List;
+
 import hshealthy.cn.com.R;
 import hshealthy.cn.com.adapter.ViewPagerAdapter;
+import hshealthy.cn.com.bean.AirPortCityBean;
 import hshealthy.cn.com.fragment.BaseFragment;
+import hshealthy.cn.com.rxhttp.RetrofitHandler;
+import hshealthy.cn.com.rxhttp.RetrofitHttp;
 import hshealthy.cn.com.util.ToastUtils;
 import hshealthy.cn.com.view.BottomNavigationViewHelper;
 
@@ -27,6 +33,17 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        RetrofitHttp.getInstance().getAirPortCode()
+                .compose(RetrofitHandler.handleResponseT())
+                .compose(RetrofitHandler.ioTransformer)
+                .subscribe(list ->{
+                    System.out.println(list);
+                    List<AirPortCityBean> mCityList = (List<AirPortCityBean>) list;
+                    System.out.println(mCityList);
+                },throwable -> {
+                    System.out.println(throwable);
+                });
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);

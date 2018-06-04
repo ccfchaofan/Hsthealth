@@ -24,17 +24,16 @@ public class RetrofitHandler {
     //转换成已传入的？类型，然后通过createRespT方法直接做gson转换，获取最终？类型
     //call的过程传入的泛型，在createRespData方法中才能获取data，然后转换成？类型
     //如果传入的o.getData，这获取的是Object,不是Respbean中声明的？类型
-    public static <T> Observable.Transformer<ResponseBean<T>,T> handleResponseT(){
-        Observable.Transformer<ResponseBean<T>,T> transformer = new Observable.Transformer<ResponseBean<T>, T>() {
+    public static Observable.Transformer<ResponseBean,String> handleResponseT(){
+        Observable.Transformer<ResponseBean,String> transformer = new Observable.Transformer<ResponseBean, String>() {
             @Override
-            public Observable<T> call(Observable<ResponseBean<T>> responseBeanObservable) {
-                Observable observable = responseBeanObservable.flatMap(new Func1<ResponseBean<T>, Observable<T>>() {
+            public Observable<String> call(Observable<ResponseBean> responseBeanObservable) {
+                return responseBeanObservable.flatMap(new Func1<ResponseBean, Observable<String>>() {
                     @Override
-                    public Observable<T> call(ResponseBean<T> tResponseBean) {
+                    public Observable<String> call(ResponseBean tResponseBean) {
                         return createRespT(tResponseBean);
                     }
                 });
-                return observable;
             }
         };
         return transformer;
@@ -74,7 +73,7 @@ public class RetrofitHandler {
         };
         return transformer;
     }
-    //和handlerResponseStr配合使用，传入的Object T，传出的也是Object T。配合newTransformer的话就是String
+    //和handlerResponseStr配合使用，传入的Object T，传出的也是Object T。配合handlerResponseStr的话就是String
     public static <T> Observable createStr(T t){
         return Observable.create(new Observable.OnSubscribe<Object>() {
             @Override
