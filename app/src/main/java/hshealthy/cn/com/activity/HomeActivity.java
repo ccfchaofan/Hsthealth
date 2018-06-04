@@ -14,6 +14,7 @@ import hshealthy.cn.com.R;
 import hshealthy.cn.com.adapter.ViewPagerAdapter;
 import hshealthy.cn.com.bean.AirPortCityBean;
 import hshealthy.cn.com.fragment.BaseFragment;
+import hshealthy.cn.com.fragment.PresonalCenterFragment;
 import hshealthy.cn.com.rxhttp.RetrofitHandler;
 import hshealthy.cn.com.rxhttp.RetrofitHttp;
 import hshealthy.cn.com.util.ToastUtils;
@@ -106,11 +107,12 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        PresonalCenterFragment presonalCenterFragment = new PresonalCenterFragment();
 
-        adapter.addFragment(BaseFragment.newInstance("首页"));
-        adapter.addFragment(BaseFragment.newInstance("专家"));
-        adapter.addFragment(BaseFragment.newInstance("健康"));
-        adapter.addFragment(BaseFragment.newInstance("我的"));
+//        adapter.addFragment(BaseFragment.instantiate(getApplicationContext(),"首页"));
+//        adapter.addFragment(BaseFragment.instantiate(getApplicationContext(),"专家"));
+//        adapter.addFragment(BaseFragment.instantiate(getApplicationContext(),"健康"));
+        adapter.addFragment(presonalCenterFragment);
         viewPager.setAdapter(adapter);
     }
 

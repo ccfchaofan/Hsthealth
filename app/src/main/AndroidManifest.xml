@@ -29,6 +29,10 @@
                 android:resource="@xml/rc_file_path" />
         </provider>
 
+        <activity android:name=".activity.PersonalInformationActivtiy">
+
+        </activity>
+
     </application>
 
 

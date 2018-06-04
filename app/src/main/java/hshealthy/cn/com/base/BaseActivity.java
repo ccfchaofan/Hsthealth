@@ -3,6 +3,7 @@ package hshealthy.cn.com.base;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 
 import butterknife.ButterKnife;
@@ -16,6 +17,7 @@ import hshealthy.cn.com.util.WeakReferenceUtil;
 public abstract class BaseActivity<P extends BasePresenter> extends FragmentActivity implements BaseView, View.OnClickListener {
     protected View view;
     protected P mPresenter;
+    public FragmentManager fm;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

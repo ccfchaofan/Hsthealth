@@ -7,13 +7,17 @@
     <color name="tab_checked">#3F51B5</color>
     <color name="tab_unchecked">#757575</color>
     <color name="color_ffffff">#ffffff</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="transparent">#00000000</color>
 
     <!-- 通用标准文案颜色值 -->
     <color name="standard_font_color">#4A4A4A</color>
     <!-- 3级文案颜色值 -->
     <color name="there_font_color">#9B9B9B</color>
-
-    
+    <color name="color_8000">#8000</color>
+    <color name="color_c8c8c8">#c8c8c8</color>
     <color name="color_f7c63e">#f7c63e</color>
+    <color name="color_backs">#000000</color>
+    <color name="color_f4f6fa">#f4f6fa</color>
     <color name="color_878787">#878787</color>
 </resources>
