@@ -35,16 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        RetrofitHttp.getInstance().getAirPortCode()
-                .compose(RetrofitHandler.handleResponseT())
-                .compose(RetrofitHandler.ioTransformer)
-                .subscribe(list ->{
-                    System.out.println(list);
-                    List<AirPortCityBean> mCityList = (List<AirPortCityBean>) list;
-                    System.out.println(mCityList);
-                },throwable -> {
-                    System.out.println(throwable);
-                });
+
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -103,6 +94,21 @@ public class HomeActivity extends AppCompatActivity {
 //        });
 
         setupViewPager(viewPager);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        RetrofitHttp.getInstance().getAirPortCode()
+                .compose(RetrofitHandler.handleResponseT())
+                .compose(RetrofitHandler.ioTransformer)
+                .subscribe(list ->{
+                    System.out.println(list);
+                    List<AirPortCityBean> mCityList = (List<AirPortCityBean>) list;
+                    System.out.println(mCityList);
+                },throwable -> {
+                    System.out.println(throwable);
+                });
     }
 
     private void setupViewPager(ViewPager viewPager) {
