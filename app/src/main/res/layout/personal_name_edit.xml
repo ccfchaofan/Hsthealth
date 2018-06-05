@@ -14,6 +14,7 @@
         android:paddingBottom="@dimen/dp_13"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/edit_name"
             android:layout_width="match_parent"
             android:hint="@string/name"
             android:layout_height="wrap_content"

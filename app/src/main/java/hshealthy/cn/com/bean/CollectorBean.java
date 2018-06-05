@@ -12,11 +12,22 @@ public class CollectorBean implements Serializable {
 
     private Context context;
 
+    //传参切换环境
+    private String  urltype;
+
     public Context getContext() {
         return context;
     }
 
     public void setContext(Context context) {
         this.context = context;
+    }
+
+    public String getUrltype() {
+        return urltype;
+    }
+
+    public void setUrltype(String urltype) {
+        this.urltype = urltype;
     }
 }

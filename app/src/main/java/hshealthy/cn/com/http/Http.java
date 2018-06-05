@@ -3,20 +3,13 @@ package hshealthy.cn.com.http;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import hshealthy.cn.com.MyApp;
 import hshealthy.cn.com.api.UrlHelper;
-import hshealthy.cn.com.digest.DigestUtils;
-import hshealthy.cn.com.util.MD5Utils;
 import hshealthy.cn.com.util.NetworkUtil;
-import hshealthy.cn.com.util.SpUtils;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
-import okhttp3.FormBody;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;

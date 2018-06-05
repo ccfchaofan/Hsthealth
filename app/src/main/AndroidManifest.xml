@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="hshealthy.cn.com">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name="hshealthy.cn.com.MyApp"
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.HomeActivity"
@@ -29,6 +38,17 @@
                 android:resource="@xml/rc_file_path" />
         </provider>
 
+        <provider
+            tools:replace="android:authorities,android:name"
+            android:name=".photo.ImagePickerProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                tools:replace="android:resource,android:name"
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/lb_hslib_provider_paths"/>
+        </provider>
         <activity android:name=".activity.PersonalInformationActivtiy">
 
         </activity>

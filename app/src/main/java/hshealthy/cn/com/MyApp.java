@@ -3,6 +3,7 @@ package hshealthy.cn.com;
 import android.app.Application;
 import android.content.Context;
 
+import hshealthy.cn.com.api.HsHealthyInstance;
 import io.rong.imkit.RongIM;
 
 /**
@@ -17,6 +18,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         appContext = this;
+        HsHealthyInstance.init(getApplicationContext(),"");
         RongIM.init(this);
     }
 
